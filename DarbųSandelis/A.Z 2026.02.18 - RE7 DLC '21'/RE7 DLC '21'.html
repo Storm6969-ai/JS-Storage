@@ -7,10 +7,20 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <div class="playerCurrentStats"></div>
+  <div class="enemyCurrentStats"></div>
   <div class="opponent"></div>
+  <button accesskey="t" onclick="alert('This is nice'),drawCard()">BUTTTTON</button>
   <div class="table">
     <div class="enemySide">
-      <div class="enemyTrumpCardSpace">Enemy Trump card space</div>
+      <div class="enemyTrumpCardSpace">
+        <div class="enemy_TrumpCard_Space_1"></div>
+        <div class="enemy_TrumpCard_Space_2"></div>
+        <div class="enemy_TrumpCard_Space_3"></div>
+        <div class="enemy_TrumpCard_Space_4"></div>
+        <div class="enemy_TrumpCard_Space_5"></div>
+        <div class="enemy_TrumpCard_Space_6"></div>
+      </div>
       <div class="enemyCardSpace">
         <div class="enemy_PlayingCard_Place_1"></div>
         <div class="enemy_PlayingCard_Place_2"></div>
@@ -24,10 +34,17 @@
       </div>
     </div>
     <div class="playerSide">
-      <div class="playerTrumpCardSpace">Player Trump card space</div>
+      <div class="playerTrumpCardSpace">
+        <div class="player_TrumpCard_Space_1"></div>
+        <div class="player_TrumpCard_Space_2"></div>
+        <div class="player_TrumpCard_Space_3"></div>
+        <div class="player_TrumpCard_Space_4"></div>
+        <div class="player_TrumpCard_Space_5"></div>
+        <div class="player_TrumpCard_Space_6"></div>
+      </div>
       <div class="playerCardSpace">
         <div class="player_PlayingCard_Place_1">
-          <div class="firstCardsSpace"><div id="firstCardNumber">8</div></div>
+          <div class="firstCardsSpace"><div id="firstPlayerCardNumber">turned</div></div>
         </div>
         <div class="player_PlayingCard_Place_2"></div>
         <div class="player_PlayingCard_Place_3"></div>
@@ -36,24 +53,11 @@
         <div class="player_PlayingCard_Place_6"></div>
       </div>
       <div class="playerCardCounter">
-        <div id="currentPlayerCsore">score</div>/<div id="currentgoal">goal</div>
+        <div id="currentPlayerScore">score</div>/<div id="currentgoal">goal</div>
       </div>
     </div>
   </div>
   
-
-        
-
-
-
-
-  <!-- <button onclick="startGame()">Start Game</button> -->
-
-  <!-- djfasuidfjkhsaxjhbcjsvjhcbjsvjchvsjdvcjgsvdkgcv -->
-
-
-
-
 
 
   <!-- <script src="./script.js"></script> -->
