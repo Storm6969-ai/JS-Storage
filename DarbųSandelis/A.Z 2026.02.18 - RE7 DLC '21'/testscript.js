@@ -11,6 +11,8 @@ function remove(array, value){ //SPEED UP FUNCTION: removes a value from an arra
     return false
   }
 }
+
+
 function drawCard(card = currentCards[getRandomInt(0, currentCards.length-1)]){ //SPEED UP FUNCTION: draws a card from the current deck, if card isn't there, nothing happens
   if (currentCards.includes(card)){
     remove(currentCards, card)

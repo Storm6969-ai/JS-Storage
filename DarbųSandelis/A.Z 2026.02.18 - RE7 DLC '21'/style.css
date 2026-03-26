@@ -1,10 +1,12 @@
 *{
+  font-family: Arial, Helvetica, sans-serif;
   transform-style: preserve-3d;
   overflow: hidden;
   color: white;
   padding: 0;
   margin: 0;
   background-size: 100% 100%;
+  text-align: center;
 }
 :root{
   --cardHeight: 172px;
@@ -17,7 +19,6 @@ body{
   position: relative;
   perspective: 800px;
 }
-
 .table{
   position: absolute;
   bottom: 0;
@@ -26,7 +27,7 @@ body{
   width: 120vw;
   /*delete when done*/ background-image: radial-gradient(ellipse at 50% 50%, #445297 0%, #ff0000 100%);
   /* background-image: url(pictures/tableBackground.png); */
-  transform: rotateX(45deg) translateZ(-4em) translateY(-2.5cm) translateX(25em);
+  transform: rotateX(45deg) translateZ(-4em) translateY(-2.5cm) translateX(27em);
 }
 
 /* player and enemy sides */
@@ -53,9 +54,7 @@ body{
   font-size: 4em;
   height: 33%;
 }
-.enemyTrumpCardSpace{
-  /*delete when done*/ background-color: #b8de0c;
-}
+.enemyTrumpCardSpace{/*delete when done*/ background-color: #b8de0c;}
 .playerTrumpCardSpace > div, .enemyTrumpCardSpace > div{
   height: 1.5em;
   width: 1.5em;
@@ -233,11 +232,84 @@ body{
   background-repeat: no-repeat;
 }
 
-button{
-  background-color: firebrick;
-  right: 50%; bottom: 50%; transform: translateX(50%) translateY(50%);
+.playerCurrentStats, .enemyCurrentStats{
   z-index: 1;
   position: absolute;
-  height: 100px;
-  width: 200px;
+  left: 0;
+  height: 100vh;
+  width: 400px;
+  /* border: 4px solid firebrick; */
+}
+.playerCurrentHealth{
+  width: 250px;
+  left: 20px;
+}
+.enemyCurrentStats{
+left: 50%; transform: translateX(-45%);
+}
+.playerCurrentHealth, .enemyCurrentHealth{
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.enemyCurrentHealth *, .playerCurrentHealth * {
+  background-color: transparent;
+  background-image: url(pictures/healthLost.png);
+  height: 70px;
+  width: 70px;
+  margin: auto;
+}
+
+button, label{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  line-height: 1;
+  font-size: 5em;
+  left: 20px;
+  z-index: 1;
+  position: absolute;
+  height: auto;
+  width: 250px;
+  border: none;
+  border-radius: 15px;
+}
+.drawCardButton{
+  bottom: 60%; 
+  background-color: hsl(0, 60%, 50%);
+  border: 4px solid hsl(0, 100%, 50%);
+}
+.drawCardButton:hover{
+  background-color: hsl(0, 100%, 50%);
+}
+
+/* .openTrumpCardMenu{
+  bottom: 43%;
+  transform: translateY(50%);
+  font-size: 2.5em;
+  height: 108px;
+  position: absolute;
+  border: 4px solid hsl(300, 60%, 50%);
+  background-color: hsl(300, 100%, 30%);
+  z-index: 1;
+}
+.openTrumpCardMenu:hover,
+input[type="checkbox"]:checked + .openTrumpCardMenu{
+  background-color: hsl(300, 60%, 50%);
+} */
+
+
+.stayButton{
+  bottom: 15%;
+  background-color: hsl(225, 60%, 50%);
+  border: 4px solid hsl(255, 100%, 40%);
+}
+.stayButton:hover{
+  background-color: hsl(255, 100%, 40%);
+}
+
+
+button span, label span{
+  font-size: 20px;
 }
