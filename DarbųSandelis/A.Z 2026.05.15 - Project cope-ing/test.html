@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="lt">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Document</title>
+  <link rel="stylesheet" href="test.css">
+
+  <style>
+    *{margin:0;padding:0;box-sizing:border-box;font-family:Arial, sans-serif;}
+    /* html{scroll-behavior: smooth;} */
+
+    body{ background:#0f172a; color:white; line-height:1.6;}
+
+    header{ background:#111827; padding:20px 60px; display:flex; justify-content:space-between; align-items:center; position:sticky; top:0;}
+    header h1{color:#38bdf8;}
+
+    nav a{color:white;text-decoration:none;margin-left:20px; transition:.3s;}
+    nav a:hover{ color:#38bdf8;}
+    
+
+    .hero{ height:90vh; display:flex; flex-direction:column; justify-content:center; align-items:center; text-align:center; padding:20px; background:linear-gradient(rgba(0,0,0,.6), rgba(0,0,0,.7)),
+        url('https://images.unsplash.com/photo-1516321318423-f06f85e504b3?q=80&w=1600&auto=format&fit=crop')
+        center/cover;
+    }
+    .hero h2{ font-size:60px; margin-bottom:20px;}
+    .hero p{ max-width:800px; font-size:20px; opacity:.9;}
+
+    .buttaton{ margin-top:30px; background:#38bdf8; color:black; padding:15px 35px; text-decoration:none; border-radius:10px; font-weight:bold; transition:.3s;}
+    .buttaton:hover{ background:white;}
+
+    section{ padding:80px 60px;}
+    .section-title{ font-size:40px; margin-bottom:40px; color:#38bdf8; text-align:center;}
+
+    .cards{ display:grid; grid-template-columns:repeat(auto-fit,minmax(250px,1fr)); gap:25px;}
+    .card{ background:#1e293b; padding:30px; border-radius:15px; transition:.3s;}
+    .card:hover{transform:translateY(-8px); background:#334155;}
+    .card h3{ margin-bottom:15px; color:#38bdf8;}
+
+    .news{display:flex;flex-direction:column;gap:20px;}
+    .news-item{ background:#1e293b; padding:25px; border-radius:15px; }
+    .news-item h4{ color:#38bdf8; margin-bottom:10px; }
+
+    footer{background:#020617;text-align:center;padding:40px 20px;margin-top:60px;}
+    footer p{opacity:.7;}
+
+    .lol{ font-weight:bold; color:#38bdf8; position: relative;}
+    .lol:hover{color: #ffffff;}
+    
+    .lol:hover .thing, .thing:hover, .thingKid:hover .thing{display: block;}
+    .thing{display: none; position: absolute; padding-top: 10px; height: 100%; width: 200%;}
+    .thing div{display: block; padding-left: 20px; color: #38bdf8;}
+  </style>
+</head>
+
+<body>
+    <header>
+    <h1>KITM</h1>
+
+    <nav>
+        <a class="lol">KITi Mastymai
+            <div class="thing">
+                <div class="thingKid">PMIS</div>
+                <div class="thingKid">Eduroam</div>
+                <div class="thingKid">Egzaminai</div>
+                <div class="thingKid">Mokinio pažymėjimas</div>
+                <div class="thingKid">Mokymo grafikai</div>
+                <div class="thingKid">Karjeros keliai</div>
+                <div class="thingKid">Diplomai</div>
+            </div>
+        </a>
+        <a href="#hero">Pagrindinis</a>
+        <a href="#mokymas">Programos</a>
+        <a href="#news">Naujienos</a>
+        <a href="#contacts">Kontaktai</a>
+    </nav>
+    </header>
+
+    <section id="hero" class="hero">
+    <h2>Tai, ko reikia šiandien!</h2>
+
+    <p>
+        Kauno informacinių technologijų mokykla – moderni IT mokykla,
+        ruošianti programuotojus, multimedijos specialistus,
+        tinklų administratorius ir kitus technologijų profesionalus.
+    </p>
+
+    <a href="#" class="buttaton">Registruotis</a>
+    </section>
+
+    <section id="mokymas">
+    <h2 class="section-title">Mokymo Programos</h2>
+
+    <div class="cards">
+
+        <div class="card">
+        <h3>Programavimas</h3>
+        <p>
+            Išmok kurti modernias sistemas, internetines svetaines
+            ir programinę įrangą.
+        </p>
+        </div>
+
+        <div class="card">
+        <h3>Multimedija</h3>
+        <p>
+            Kurk grafiką, animacijas, video turinį ir vizualinius projektus.
+        </p>
+        </div>
+
+        <div class="card">
+        <h3>Tinklų administravimas</h3>
+        <p>
+            Susipažink su serveriais, tinklais ir IT infrastruktūra.
+        </p>
+        </div>
+
+        <div class="card">
+        <h3>Programinės įrangos testavimas</h3>
+        <p>
+            Mokykis testuoti sistemas ir užtikrinti jų kokybę.
+        </p>
+        </div>
+
+        <div class="card">
+            <h3>Sistemos Administratorius</h3>
+            <p>
+            Saugok sistemas ir užtikrink jų saugumą.
+            </p>
+        </div>
+
+    </div>
+    </section>
+
+    <section id="news">
+    <h2 class="section-title">Naujienos</h2>
+
+    <div class="news">
+
+        <div class="news-item">
+        <h4>Kviečiame registruotis būsimus devintokus!</h4>
+        <p>
+            Prisijunk prie KITM bendruomenės ir rinkis IT specialybę.
+        </p>
+        </div>
+
+        <div class="news-item">
+        <h4>Atvirų durų diena</h4>
+        <p>
+            Apsilankyk mokykloje ir susipažink su mokymo programomis.
+        </p>
+        </div>
+
+        <div class="news-item">
+        <h4>Tarptautinė IT diena</h4>
+        <p>
+            Renginys, suburiantis IT specialistus, mokinius ir technologijų entuziastus.
+        </p>
+        </div>
+
+    </div>
+    </section>
+
+    <section id="contacts">
+    <h2 class="section-title">Kontaktai</h2>
+
+    <div class="card">
+        <h3>Kauno informacinių technologijų mokykla</h3>
+
+        <p>Laisvės al. 33 / Kęstučio g. 53, Kaunas</p>
+        <p>+370 37 201710</p>
+        <p>info@kitm.lt</p>
+    </div>
+    </section>
+
+    <footer>
+    <p>© 2026 KITM – Visos teisės saugomos</p>
+    </footer>
+
+</body>
+</html>
